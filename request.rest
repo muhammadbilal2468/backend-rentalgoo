@@ -1,0 +1,212 @@
+# ------------------------------------------------ USER ---------------------------------------
+
+// GET ALL USERS
+GET http://localhost:5000/users
+
+// GET USER BY ID
+###
+GET http://localhost:5000/users/cddf441b-f1f1-4fe0-92e6-19c3a138a3d5
+
+// CREATRE USER
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "file": "",
+    "name" : "admin",
+    "email": "admin@gmail.com",
+    "nohp": "",
+    "address": "",
+    "location": "",
+    "password": "123",
+    "confPassword": "123",
+    "role": "admin"
+}
+
+// UPDATE USER
+###
+PATCH  http://localhost:5000/users/ad8f9cc2-56f2-490b-bd23-515a416d1fc5
+Content-Type: application/json
+
+{
+    "name" : "ucok update",
+    "email": "ucok@gmail.com",
+    "password": "123",
+    "confPassword": "123",
+    "role": "user"
+}
+
+// DELETE USER
+###
+DELETE http://localhost:5000/users/cddf441b-f1f1-4fe0-92e6-19c3a138a3d5
+
+
+
+# ------------------------------------------------ AUTH -------------------------------------------------
+
+
+
+// LOGIN ADMIN
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123"
+}
+
+// LOGIN USER
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "feby@gmail.com",
+    "password": "123"
+}
+
+// REGISTER
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name" : "bilal",
+    "email": "bilal@gmail.com",
+    "password": "123",
+    "confPassword": "123"
+}
+
+// LOGOUT USER
+###
+DELETE  http://localhost:5000/logout
+
+// ME USER
+###
+GET http://localhost:5000/me
+
+// UPDATE ME
+###
+PATCH  http://localhost:5000/me/492e3c39-e946-4770-b30a-faf52c83aed4
+Content-Type: application/json
+
+{
+    "name" : "bilal",
+    "email": "bilal@gmail.com",
+    "nohp": "082323232323",
+    "address": "baliase",
+    "location": "192937292837"
+}
+
+
+
+# ------------------------------------------------ PRODUCT -------------------------------------------------
+
+
+
+// GET MY PRODUCTS
+###
+GET http://localhost:5000/myproducts
+
+// GET ALL PRODUCTS
+###
+GET http://localhost:5000/products
+
+// GET CLOSEST PRODUCTS
+###
+GET http://localhost:5000/closestproducts
+
+// GET PRODUCTS BY ID
+###
+GET http://localhost:5000/products/e3a86e28-be14-4633-9d20-def30946266f
+
+// UPPLOAD PRODUCT
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "mobil bilal 2",
+    "category": "kendaraan",
+    "description": "bagus",
+    "stock": 1,
+    "price": 2000
+}
+
+// UPDATE PRODUCT
+###
+PATCH  http://localhost:5000/products/e3a86e28-be14-4633-9d20-def30946266f
+Content-Type: application/json
+
+{
+    "name": "mobil bilal 2 update",
+    "category": "kendaraan",
+    "description": "bagus",
+    "stock": 1,
+    "price": 2000
+}
+
+// DELETE PRODUCT
+###
+DELETE http://localhost:5000/products/e3a86e28-be14-4633-9d20-def30946266f
+
+
+
+# ------------------------------------------------ SAVE PRODUCT -------------------------------------------------
+
+
+
+// GET ALL SAVE PRODUCTS
+###
+GET http://localhost:5000/saveproducts
+
+// GET SAVE PRODUCTS BY ID
+###
+GET http://localhost:5000/saveproducts/ee67b31e-f338-43a9-b00a-34b1473f9057
+
+// UPPLOAD SAVE PRODUCT
+###
+POST http://localhost:5000/saveproducts
+Content-Type: application/json
+
+{
+    "name": "mobil bilal 2",
+    "category": "kendaraan",
+    "description": "bagus",
+    "stock": 1,
+    "price": 2000
+}
+
+// DELETE SAVE PRODUCT
+###
+DELETE http://localhost:5000/saveproducts/01bcf4a2-6b0e-4e7b-ba40-4f52161781ba
+
+
+
+# ------------------------------------------------ AUTH -------------------------------------------------
+
+
+
+// GET ALL SUGGESTIONS
+###
+GET http://localhost:5000/suggestions
+
+// GET SUGGESTION BY ID
+###
+GET http://localhost:5000/suggestions/1
+
+// UPPLOAD SUGGESTION
+###
+POST http://localhost:5000/suggestions
+Content-Type: application/json
+
+{
+    "name": "saya",
+    "suggestion": "bagus sekali leh"
+}
+
+// DELETE SUGGESTION
+###
+DELETE http://localhost:5000/suggestions/77f1206b-fdf5-49ed-9096-a701a00a97de
